@@ -1,10 +1,41 @@
-# Logentries Xamarin.iOS Bindings
+# Logentries SDK for Xamarin.iOS
+[![NuGet Badge](https://buildstats.info/nuget/Xamarin.Logentries.iOS?includePreReleases=true)](https://www.nuget.org/packages/Xamarin.Logentries.iOS/)
 
-Xamarin iOS unified bindings for Logentries le_ios static library
+This is a Xamarin iOS unified bindings for Logentries le_ios static library
 [le_ios](https://github.com/logentries/le_ios)
 
-Current binding is built against [commit 9410167edf11010a439b68475327139284e28a7f](https://github.com/logentries/le_ios/commit/9410167edf11010a439b68475327139284e28a7f)
+Current binding is built against [commit 425e8357802d4834f3d4ce64204dcfd1347bf02f](https://github.com/logentries/le_ios/commit/425e8357802d4834f3d4ce64204dcfd1347bf02f)
 
+[Logentries for iOS features](https://github.com/LogentriesCommunity/le_ios):
+-------------
+
+* online/offline logging
+* dictionary serialization
+* secure TLS connection
+* thread safety
+* application lifecycle logging
+* application crash logging with stack traces
+
+Installation
+------------
+
+Install NuGet package: `Install-Package Xamarin.Logentries.iOS`
+
+If you don't have an account yet, go ahead and [create free account](https://logentries.com/learnmore?code=781f627c).
+
+_Note: this is a referral link. Using it will help to grow my logging limits. Here is a plain old url [https://logentries.com/](https://logentries.com/)_
+
+Simple example
+--------------
+
+```
+using Logentries.iOS;
+...
+LELog.SharedInstance.Token = yourToken;
+LELog.SharedInstance.Log("Hey, world of live logging! What's up?");
+```
+
+Additional information available on [Logentries website](https://logentries.com) and [Logentries iOS repository](https://github.com/LogentriesCommunity/le_ios).
 
 
 ### Binding details
